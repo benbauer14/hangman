@@ -19,11 +19,9 @@ def checkLetters(guess):
     found = False
     for letterIndex in range(0,len(solutionArray)):
         if(guess == solutionArray[letterIndex]):
-            print("Found it!")
             guessArray[letterIndex] = guess
             found = True
         else:
-            print("Nope")
     print(guessArray)
 
     if(found == False):
@@ -90,6 +88,6 @@ def buildHangMan():
 
 while attempts < 6:
     buildHangMan()
-    guess = input(f"Please guess a letter.\n")
+    guess = input(f"Please guess a letter.\n").lower()
     checkLetters(guess)
 
